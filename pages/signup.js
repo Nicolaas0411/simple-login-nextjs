@@ -23,7 +23,7 @@ const Signup = () => {
         'roles': ['ROLE_ADMIN']
       }),
     })
-      .then((r) => r.json())
+      .then((r) => r.text())
       .then((data) => {
         if (data && data.error) {
           setSignupError(data.message);
